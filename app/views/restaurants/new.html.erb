@@ -1,0 +1,8 @@
+<div class="w-50 mx-auto">
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: Restaurant::AUTHORIZED_CATEGORIES %>
+    <%= f.submit "Submit restaurant", class: "btn btn-primary" %>
+  <% end %>
+</div>
